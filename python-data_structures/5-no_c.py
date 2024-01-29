@@ -7,5 +7,3 @@ def no_c(my_string):
         if ch != 'C' and ch != 'c':
             mystring += ch
     return mystring
-
-
