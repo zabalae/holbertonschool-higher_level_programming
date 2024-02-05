@@ -56,3 +56,9 @@ Importing the function from the module
 	Traceback (most recent call last):
 	...
 	TypeError: div must be a number
+
+#Test Case Matrix with non number
+	>>> matrix_divided([[2, 4, 8], [1, "sss", 2]], 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
