@@ -1,0 +1,52 @@
+# Test Cases for text_indentation function
+
+Importing the function from the module
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test string with spaces 2:
+    >>> text_indentation("        Holberton")
+    Holberton
+
+# Test newline:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+# Test:
+    >>> text_indentation("Hello: Holberton? school. fooo")
+    Hello:
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+    fooo
+
+# Test:
+    >>> text_indentation("     ?   ")
+    ?
+    <BLANKLINE>
+
+# Test newline 2:
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+    <BLANKLINE>
+
+# Test existing newlines:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+# Test none:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
