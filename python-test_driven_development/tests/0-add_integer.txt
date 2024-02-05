@@ -36,13 +36,13 @@ Importing the function from the module:
 	77777777
 
 #Test Case Add NaN:
-	>>> add_integer(1, float('Nan')
+	>>> add_integer(1, float('Nan'))
 	Traceback (most recent call last):
 	...
-	ValueError: cannot convert float Nan to integer
+	ValueError: cannot convert float NaN to integer
 
 #Test float overflow:
 	>>> add_integer(float('inf'), 0)
 	Traceback (most recent call last):
 	...
-	OverflowError: cannot convert float infinity to int
+	OverflowError: cannot convert float infinity to integer
