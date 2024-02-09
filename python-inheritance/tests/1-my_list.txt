@@ -1,6 +1,6 @@
 # Test cases for 1-my_list.py
 
->>> MyList = __import__('1-my_list').MyList <<<
+>>> MyList = __import__('1-my_list').MyList
 
 #Case 1
     #List with duplicate elements
