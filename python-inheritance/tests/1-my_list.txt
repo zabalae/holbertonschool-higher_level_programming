@@ -1,0 +1,23 @@
+# Test cases for 1-my_list.py
+
+>>> MyList = __import__('1-my_list').MyList <<<
+
+#Case 1
+    List with duplicate elements
+    my_list = MyList()
+    my_list.extend([2, 1, 2, 3, 3])
+    my_list.print_sorted()
+    Output: [1, 2, 2, 3, 3]
+
+#Case 2
+    List with negative numbers
+    my_list = MyList()
+    my_list.extend([-3, -1, -5, -2, -4])
+    my_list.print_sorted()
+    Output: [-5, -4, -3, -2, -1]
+
+#Case 3
+    Empty List
+	 my_list = MyList()
+	 my_list.print_sorted()
+	 Output: []
