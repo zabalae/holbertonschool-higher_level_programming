@@ -4,51 +4,39 @@
 
 #Case 1
     #List with duplicate elements
-    my_list = MyList()
-    my_list.extend([2, 1, 2, 3, 3])
-    my_list.print_sorted()
-    Output: [1, 2, 2, 3, 3]
+    >>> my_list = MyList()
+    >>> my_list.extend([2, 1, 2, 3, 3])
+    >>> my_list.print_sorted()
+    [1, 2, 2, 3, 3]
 
 #Case 2
     #List with negative numbers
-    my_list = MyList()
-    my_list.extend([-3, -1, -5, -2, -4])
-    my_list.print_sorted()
-    Output: [-5, -4, -3, -2, -1]
+    >>> my_list = MyList()
+    >>> my_list.extend([-3, -1, -5, -2, -4])
+    >>> my_list.print_sorted()
+    [-5, -4, -3, -2, -1]
 
 #Case 3
     #Empty List
-	 my_list = MyList()
-	 my_list.print_sorted()
-	 Output: []
+	 >>> my_list = MyList()
+	 >>> my_list.print_sorted()
+	 []
 
 #Case 4
-    #Regular Test
-    my_list = MyList()
-    my_list.append(1)
-    my_list.append(4)
-    my_list.append(2)
-    my_list.append(3)
-    my_list.append(5)
-    print(my_list)
-    my_list.print_sorted()
-    print(my_list)
-
-#Case 5
-    #Reversed order List
-     my_list = MyList()
-	 my_list.append(9)
-	 my_list.append(8)
-	 my_list.append(7)
-	 my_list.append(6)
-	 print(my_list)
+    #Regular test
+     >>> my_list = MyList()
+	 >>> my_list.append(9)
+	 >>> my_list.append(8)
+	 >>> my_list.append(7)
+	 >>> my_list.append(6)
+	 >>> print(my_list)
 	 [9, 8, 7, 6]
 	 >>> my_list.print_sorted()
 	 [6, 7, 8, 9]
 	 >>> print(my_list)
 	 [9, 8, 7, 6]
 
-#Case 6
+#Case 5
     #Checking for too many arguments:
 	 my_list.print_sorted(1)
 	 Traceback (most recent call last):
