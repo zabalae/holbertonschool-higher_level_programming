@@ -54,3 +54,10 @@
     Traceback (most recent call last):
     	      ...
     TypeError: area() takes 1 positional argument but 3 were given
+
+#Case 6
+    >>> baseGeo = BaseGeometry()
+    >>> baseGeo.area()
+    Traceback (most recent call last):
+    	      ...
+    Exception: area() is not implemented
