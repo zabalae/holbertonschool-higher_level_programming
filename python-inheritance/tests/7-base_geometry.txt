@@ -10,7 +10,7 @@
     TypeError: name must be an integer
 
 #Case 2
-    baseGeo = BaseGeometry()
+    baseGeo = baseGeometry()
 
     baseGeo.integer_validator("my_int", 12)
     baseGeo.integer_validator("width", 89)
@@ -35,8 +35,15 @@
     [ValueError] distance must be greater than 0
 
 #Case 3
-    >>> baseGeo = BaseGeometry()
+    >>> baseGeo = baseGeometry()
     >>> baseGeo.integer_validator("name")
     Traceback (most recent call last):
     	      ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+#Case 4
+    >>> baseGeo = baseGeometry()
+    >>> baseGeo.area(5)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: area() takes 1 positional argument but 2 were given
