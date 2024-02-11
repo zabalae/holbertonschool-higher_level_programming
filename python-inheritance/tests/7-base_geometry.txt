@@ -45,19 +45,20 @@
     >>> bg = BaseGeometry()
     >>> bg.area(5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: area() takes 1 positional argument but 2 were given
 
 #Case 5
     >>> bg = BaseGeometry()
     >>> bg.area(5, 5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: area() takes 1 positional argument but 3 were given
 
 #Case 6
+    #area failure
     >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
-    	      ...
+    ...
     Exception: area() is not implemented
