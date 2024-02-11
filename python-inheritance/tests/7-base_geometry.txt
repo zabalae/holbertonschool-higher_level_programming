@@ -10,6 +10,14 @@
     TypeError: name must be an integer
 
 #Case 2
+    #area failure
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+#Case 3
     bg = BaseGeometry()
 
     bg.integer_validator("my_int", 12)
@@ -34,31 +42,23 @@
     [ValueError] age must be greater than 0
     [ValueError] distance must be greater than 0
 
-#Case 3
+#Case 4
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name")
     Traceback (most recent call last):
     	      ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-#Case 4
+#Case 5
     >>> bg = BaseGeometry()
     >>> bg.area(5)
     Traceback (most recent call last):
     ...
     TypeError: area() takes 1 positional argument but 2 were given
 
-#Case 5
+#Case 6
     >>> bg = BaseGeometry()
     >>> bg.area(5, 5)
     Traceback (most recent call last):
     ...
     TypeError: area() takes 1 positional argument but 3 were given
-
-#Case 6
-    #area failure
-    >>> bg = BaseGeometry()
-    >>> bg.area()
-    Traceback (most recent call last):
-    ...
-    Exception: area() is not implemented
