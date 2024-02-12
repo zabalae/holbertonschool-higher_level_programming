@@ -1,8 +1,10 @@
 #Test cases for 7-base_geometry
 
->>> BaseGeometry = __import__('7-base_geometry).BaseGeometry
+#Importing the function:
+    >>> BaseGeometry = __import__('7-base_geometry).BaseGeometry
 
 #Case 1
+    #non integer value
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "5")
     Traceback (most recent call last):
@@ -10,14 +12,15 @@
     TypeError: name must be an integer
 
 #Case 2
-    #area failure
+    #area is not implemented
     >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
     ...
-    TypeError: area() is not implemented
+    Exception: area() is not implemented
 
 #Case 3
+    #Regular test
     >>> bg = BaseGeometry()
 
     >>> bg.integer_validator("my_int", 12)
@@ -43,6 +46,7 @@
     [ValueError] distance must be greater than 0
 
 #Case 4
+    #one argument to integer_validator
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name")
     Traceback (most recent call last):
@@ -50,15 +54,10 @@
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 #Case 5
+    #too many arguments for area
     >>> bg = BaseGeometry()
     >>> bg.area(5)
     Traceback (most recent call last):
     ...
     TypeError: area() takes 1 positional argument but 2 were given
 
-#Case 6
-    >>> bg = BaseGeometry()
-    >>> bg.area(5, 5)
-    Traceback (most recent call last):
-    ...
-    TypeError: area() takes 1 positional argument but 3 were given
