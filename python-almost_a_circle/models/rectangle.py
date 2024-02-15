@@ -74,7 +74,7 @@ class Rectangle(Base):
     def area(self):
         '''calculate the area'''
         return (self.width * self.height)
-    
+
     def display(self):
         '''method that prints in stdout'''
         if self.width == 0 or self.height == 0:
