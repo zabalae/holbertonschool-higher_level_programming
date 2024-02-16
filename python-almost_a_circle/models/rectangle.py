@@ -9,11 +9,12 @@ class Rectangle(Base):
     '''Rectangle class'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        '''Initialize Rectangle class'''
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -87,13 +88,17 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        '''Return a string representation of rectangle'''
+        '''
+        Return a string representation of rectangle
+        '''
         s = "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
         return s
 
     def update(self, *args, **kwargs):
-        '''assign an argument to each attribute'''
+        '''
+        assign an argument to each attribute
+        '''
         if args:
             for k, v in enumerate(args):
                 if k == 0:
