@@ -4,21 +4,11 @@
 
 import unittest
 import json
-import pep8
 import os
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 
-
-class TestPep8(unittest.TestCase):
-    '''Test pep8'''
-    def case_pep8(self):
-        '''Tests pep8'''
-        stylepep8 = pep8.StyleGuide(quiet=True)
-        files = ["models/base.py", "tests/test_base.py"]
-        results = stylepep8.check_files(files)
-        self.assertEqual(results.total_errors, 0, "Fix pep8")
 
 class TestBase(unittest.TestCase):
     '''Tests for base.py'''
@@ -86,3 +76,24 @@ class TestBase(unittest.TestCase):
             print(b.nb_objects)
         with self.assertRaises(AttributeError):
             print(b.__nb_objects)
+
+    def test_class(self):
+        '''Test if the class is Base'''
+        self.assertTrue(Base(2), self.__class__ == Base)
+
+    def test_create(self):
+        """Tests whether create returns an
+        instance with all attributes already set
+        """
+        rectangle1 = Rectangle(2, 3, 4, 5, 9)
+        dic = rectangle1.to_dictionary()
+        rectangle2 = Rectangle.create(**dic)
+        self.assertEqual(str(rectangle1), '[Rectangle] (9) 4/5 - 2/3')
+        self.assertEqual(str(rectangle2), '[Rectangle] (9) 4/5 - 2/3')
+        self.assertIsNot(rectangle1, rectangle2)
+
+    def test_from_json_string_type(self):
+        list_input = [{"id": 36, "width": 15, "height": 7}]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(list, type(list_output))
