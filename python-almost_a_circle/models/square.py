@@ -11,3 +11,10 @@ class Square(Rectangle):
         '''Initialize a square'''
         super().__init__(size, size, x, y, id)
         self.size = size
+
+    def __str__(self):
+        """
+        __str__ method
+        """
+        return ("[Square] ({}) {}/{} - {}".format
+                (self.id, self.x, self.y, self.size))
