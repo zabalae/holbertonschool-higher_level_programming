@@ -97,3 +97,9 @@ class TestBase(unittest.TestCase):
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
         self.assertEqual(list, type(list_output))
+
+    def test_none_load_from_file(self):
+        Rectangle.save_to_file(None)
+        recs = Rectangle.load_from_file()
+        self.assertEqual(type(recs), list)
+        self.assertEqual(len(recs), 0)
