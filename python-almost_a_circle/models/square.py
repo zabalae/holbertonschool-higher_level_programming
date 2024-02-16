@@ -26,9 +26,9 @@ class Square(Rectangle):
         """
         __str__ method
         """
-        return "[{:s}] ({:d}) {:d}/{:d} - {:d}".format(
-            self.__class__.__name__, self.id, self.x, self.y,
-            self.width)
+        value = "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                  self.y, self.width)
+        return (value)
 
     def update(self, *args, **kwargs):
         """
