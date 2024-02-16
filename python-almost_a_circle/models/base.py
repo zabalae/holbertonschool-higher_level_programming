@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-'''Class Base'''
+'''Defines a base model class'''
 
 
 import json
 
 
 class Base:
-    '''Class Base'''
+    '''Represemt the base model'''
     __nb_objects = 0
 
     def __init__(self, id=None):
