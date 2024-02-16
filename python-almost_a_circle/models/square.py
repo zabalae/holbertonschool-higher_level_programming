@@ -9,8 +9,7 @@ class Square(Rectangle):
     '''Square class'''
     def __init__(self, size, x=0, y=0, id=None):
         '''Initialize a square'''
-        super().__init__(size, size, x, y, id)
-        self.size = size
+        super().__init__(width=size, height=size, x=x, y=y, id=id)
 
     @property
     def size(self):
@@ -29,7 +28,7 @@ class Square(Rectangle):
         """
         return "[{:s}] ({:d}) {:d}/{:d} - {:d}".format(
             self.__class__.__name__, self.id, self.x, self.y,
-            self.size)
+            self.width)
 
     def update(self, *args, **kwargs):
         """
