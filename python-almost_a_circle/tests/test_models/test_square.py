@@ -34,28 +34,6 @@ class TestSquare(unittest.TestCase):
         square2 = Square(5, 10)
         self.assertEqual(square1.id, square2.id -1)
 
-    @staticmethod
-    def capture_stdout(sq, method):
-        capture = io.StringIO()
-        sys.stdout = capture
-        if method == "print":
-            print(sq)
-        else:
-            sq.display()
-        sys.stdout = sys.__stdout__
-        return capture
-
-    def strPrintSize(self):
-        s = Square(4)
-        capture = TestSquare.capture_stdout(s, "print")
-        correct = "[Square] ({}) 0/0 - 4\n".format(s.id)
-        self.assertEqual(correct, capture.getvalue())
-
-    def displaySize(self):
-        s = Square(2, 0, 0, 9)
-        capture = TestSquare.capture_stdout(s, "display")
-        self.assertEqual(" ###\n##\n", capture.getvalue())
-
     def updateArguments(self):
         s = Square(10, 10, 10, 10)
         s.update()
