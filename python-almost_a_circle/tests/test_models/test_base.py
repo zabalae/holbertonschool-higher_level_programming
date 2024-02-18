@@ -103,3 +103,6 @@ class TestBase(unittest.TestCase):
         recs = Rectangle.load_from_file()
         self.assertEqual(type(recs), list)
         self.assertEqual(len(recs), 0)
+
+if __name__ == "__main__":
+    unittest.main()
