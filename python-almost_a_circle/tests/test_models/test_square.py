@@ -34,7 +34,3 @@ class TestSquare(unittest.TestCase):
         square2 = Square(5, 10)
         self.assertEqual(square1.id, square2.id -1)
 
-    def updateArguments(self):
-        s = Square(10, 10, 10, 10)
-        s.update()
-        self.assertEqual("[Square] (10) 10/10 - 10", str(s))
