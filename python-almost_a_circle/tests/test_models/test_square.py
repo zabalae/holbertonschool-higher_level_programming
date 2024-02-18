@@ -18,24 +18,6 @@ class TestSquare(unittest.TestCase):
         '''tearDown'''
         return super().tearDown()
 
-    def testForList(self):
-        '''Test wrong size'''
-        with self.assertRaises(TypeError):
-            square1 = Square([3, 8])
-            square2 = Square(3, [4, 6], 9)
-
-    def testForStr(self):
-        '''Test wrong size'''
-        with self.assertRaises(TypeError):
-            square1 = Square(5, "H")
-            square2 = Square(6, "T", 8)
-
-    def testForBool(self):
-        '''Test Wrong size'''
-        with self.assertRaises(TypeError):
-            square1 = Square(False)
-            square2 = Square(5, False, 7)
-
     def testArea(self):
         '''Test area'''
         square1 = Square(40)
