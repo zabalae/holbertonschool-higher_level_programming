@@ -7,7 +7,7 @@ import os
 import unittest
 
 
-class Test_Rectangle(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     '''Tests for rectangle.py'''
     def test_all_attr_given(self):
         """Test all attributes match what's given"""
