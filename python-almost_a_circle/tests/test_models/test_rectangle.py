@@ -24,5 +24,11 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
 
+    def aveToFileType(self):
+        Rectangle.save_to_file([Rectangle(1, 2, 3, 4, 5)])
+        with open("Rectangle.json", "r") as f:
+            content = f.read()
+            self.assertEqual(str, type(content))
+
 if __name__ == "__main__":
     unittest.main()
