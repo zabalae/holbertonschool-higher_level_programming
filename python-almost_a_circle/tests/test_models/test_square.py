@@ -16,5 +16,10 @@ class TestSquare(unittest.TestCase):
         s2 = Square(11)
         self.assertEqual(s1.id, s2.id - 1)
 
+    def twoArguments(self):
+        s1 = Square(10, 2)
+        s2 = Square(2, 10)
+        self.assertEqual(s1.id, s2.id - 1)
+
 if __name__ == "__main__":
     unittest.main()
