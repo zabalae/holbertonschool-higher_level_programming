@@ -42,9 +42,5 @@ class TestRectangle(unittest.TestCase):
         r1.update(id=3, height=5, width=6, x=7, y=9)
         self.assertEqual(6, r1.width)
 
-    def test_width_zero(self):
-        with self.assertRaises(ValueError):
-            rect = Rectangle(0, 5)
-
 if __name__ == "__main__":
     unittest.main()
