@@ -9,12 +9,6 @@ import unittest
 
 class TestRectangle(unittest.TestCase):
     '''Tests for rectangle.py'''
-    def setUp(self) -> None:
-        return super().setUp()
-
-    def tearDown(self) -> None:
-        return super().tearDown()
-
     def test_all_attr_given(self):
         """Test all attributes match what's given"""
         r1 = Rectangle(15, 40, 5, 2, 89)
