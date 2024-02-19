@@ -11,7 +11,10 @@ import sys
 
 class TestSquare(unittest.TestCase):
     '''Test Cases for square class'''
-    pass
+    def neArgument(self):
+        s1 = Square(10)
+        s2 = Square(11)
+        self.assertEqual(s1.id, s2.id - 1)
 
 if __name__ == "__main__":
     unittest.main()
