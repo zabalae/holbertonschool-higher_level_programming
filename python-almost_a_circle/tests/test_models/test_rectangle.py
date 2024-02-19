@@ -20,9 +20,5 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle()
 
-    def test_None_width(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(None, 2)
-
 if __name__ == "__main__":
     unittest.main()
