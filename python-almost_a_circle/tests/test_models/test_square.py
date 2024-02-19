@@ -12,3 +12,6 @@ import sys
 class TestSquare(unittest.TestCase):
     '''Test Cases for square class'''
     pass
+
+if __name__ == "__main__":
+    unittest.main()
