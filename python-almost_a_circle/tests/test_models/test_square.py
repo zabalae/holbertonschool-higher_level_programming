@@ -24,5 +24,10 @@ class TestSquare(unittest.TestCase):
     def sizeGetter(self):
         self.assertEqual(5, Square(5, 2, 3, 9).size)
 
+    def widthGetter(self):
+        s = Square(4, 1, 9, 2)
+        s.size = 8
+        self.assertEqual(8, s.width)
+
 if __name__ == "__main__":
     unittest.main()
