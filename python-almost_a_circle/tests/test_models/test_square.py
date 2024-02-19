@@ -45,5 +45,10 @@ class TestSquare(unittest.TestCase):
         correct = "[Square] ({}) 10/10 - 10".format(s.id)
         self.assertEqual(correct, str(s))
 
+    def toDictionaryOutput(self):
+        s = Square(10, 2, 1, 1)
+        correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        self.assertDictEqual(correct, s.to_dictionary())
+
 if __name__ == "__main__":
     unittest.main()
