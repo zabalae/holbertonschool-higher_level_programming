@@ -21,11 +21,11 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle()
 
-    def SaveToFileNoargs(self):
+    def saveToFileNoargs(self):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
 
-    def aveToFileType(self):
+    def saveToFileType(self):
         Rectangle.save_to_file([Rectangle(1, 2, 3, 4, 5)])
         with open("Rectangle.json", "r") as f:
             content = f.read()
