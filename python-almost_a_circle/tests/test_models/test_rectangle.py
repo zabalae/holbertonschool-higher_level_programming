@@ -16,5 +16,9 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1)
 
+    def noArguments(self):
+        with self.assertRaises(TypeError):
+            Rectangle()
+
 if __name__ == "__main__":
     unittest.main()
