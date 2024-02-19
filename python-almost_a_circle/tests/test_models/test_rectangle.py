@@ -36,5 +36,10 @@ class TestRectangle(unittest.TestCase):
             content = json.load(f)
             self.assertEqual(content, [])
 
+    def testUpdateDict(self):
+        r1 = Rectangle(1, 3)
+        r1.update(id=3, height=5, width=6, x=7, y=9)
+        self.assertEqual(6, r1.width)
+
 if __name__ == "__main__":
     unittest.main()
