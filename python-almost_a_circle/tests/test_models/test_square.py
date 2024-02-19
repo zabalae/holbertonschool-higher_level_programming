@@ -39,5 +39,11 @@ class TestSquare(unittest.TestCase):
         s.update(id=1)
         self.assertEqual("[Square] (1) 10/10 - 10", str(s))
 
+    def updateKwargsNoneId(self):
+        s = Square(10, 10, 10, 10)
+        s.update(id=None)
+        correct = "[Square] ({}) 10/10 - 10".format(s.id)
+        self.assertEqual(correct, str(s))
+
 if __name__ == "__main__":
     unittest.main()
