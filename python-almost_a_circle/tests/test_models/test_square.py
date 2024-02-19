@@ -34,5 +34,10 @@ class TestSquare(unittest.TestCase):
         s.size = 8
         self.assertEqual(8, s.height)
 
+    def updateKwargsOne(self):
+        s = Square(10, 10, 10, 10)
+        s.update(id=1)
+        self.assertEqual("[Square] (1) 10/10 - 10", str(s))
+
 if __name__ == "__main__":
     unittest.main()
