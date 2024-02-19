@@ -20,5 +20,9 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle()
 
+    def SaveToFileNoargs(self):
+        with self.assertRaises(TypeError):
+            Rectangle.save_to_file()
+
 if __name__ == "__main__":
     unittest.main()
