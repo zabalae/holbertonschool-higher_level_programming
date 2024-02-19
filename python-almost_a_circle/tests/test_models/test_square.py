@@ -50,5 +50,10 @@ class TestSquare(unittest.TestCase):
         correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(correct, s.to_dictionary())
 
+    def testArea(self):
+        '''Test area'''
+        square1 = Square(40)
+        self.assertEqual(square1.area(), 40 * 40)
+
 if __name__ == "__main__":
     unittest.main()
