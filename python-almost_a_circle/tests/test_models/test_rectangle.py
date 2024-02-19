@@ -9,4 +9,9 @@ import unittest
 
 class TestRectangle(unittest.TestCase):
     '''Test Cases for rectangle class'''
-    pass
+    def oneArgument(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1)
+
+if __name__ == "__main__":
+    unittest.main()
