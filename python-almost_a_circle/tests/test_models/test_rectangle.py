@@ -30,5 +30,11 @@ class TestRectangle(unittest.TestCase):
             content = f.read()
             self.assertEqual(str, type(content))
 
+    def saveToFileNone(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            content = json.load(f)
+            self.assertEqual(content, [])
+
 if __name__ == "__main__":
     unittest.main()
