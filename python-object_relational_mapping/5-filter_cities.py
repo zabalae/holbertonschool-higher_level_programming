@@ -13,10 +13,13 @@ if __name__ == '__main__':
                          user=sys.argv[1], passwd=sys.argv[2],
                          db=sys.argv[3], charset="utf8")
     cursor = db.cursor()
-    cursor.execute("SELECT cities.name FROM cities INNER JOIN states \
-                   ONN states.id LIKE cities.state_id WHERE \
-                   states.name LIKE BINARY '{}' ORDER BY \
-                   cities.id".format(sys.argv[4]))
+    myQuery = " ".join([
+        "SELECT cities.name FROM cities",
+        "INNER JOIN states ON states.id = cities.state_id",
+        "WHERE states.name LIKE BINARY '{}'",
+        "ORDER BY cities.id",
+    ]).format(sys.argv[4])
+    cursor.execute(myQuery)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
