@@ -21,7 +21,7 @@ if __name__ == '__main__':
         ]).format(sys.argv[4])
     cursor.execute(myQuery)
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    result = ', '.join([x[0] for x in rows])
+    print(result)
     cursor.close()
     db.close()
