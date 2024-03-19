@@ -18,7 +18,7 @@ if __name__ == '__main__':
         "INNER JOIN states ON states.id = cities.state_id",
         "WHERE states.name LIKE BINARY '{}'",
         "ORDER BY cities.id",
-    ]).format(sys.argv[4])
+        ]).format(sys.argv[4])
     cursor.execute(myQuery)
     rows = cursor.fetchall()
     for row in rows:
