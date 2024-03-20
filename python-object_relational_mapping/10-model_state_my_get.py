@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     states = session.query(State).filter(
         State.name == sys.argv[4]).one_or_none()
-    
+
     if states is not None:
         print(states.id)
 
